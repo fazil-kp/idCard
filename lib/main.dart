@@ -32,7 +32,7 @@ class idCrad extends StatelessWidget {
             Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage('images/profile.jpg'),
-                radius: 40.0,
+                radius: 70.0,
               ),
             ),
             Divider(
