@@ -9,8 +9,16 @@ void main() {
   );
 }
 
-class idCrad extends StatelessWidget {
+class idCrad extends StatefulWidget {
   const idCrad({Key? key}) : super(key: key);
+
+  @override
+  State<idCrad> createState() => _idCradState();
+}
+
+class _idCradState extends State<idCrad> {
+
+  int idcard=0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +29,19 @@ class idCrad extends StatelessWidget {
         centerTitle:true,
         backgroundColor: Colors.grey[800],
         elevation: 0.0,
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            idcard +=1;
+          });
+        },
+
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
+
+
       ),
 
       body: Padding(
@@ -72,7 +93,7 @@ class idCrad extends StatelessWidget {
               height: 10.0,
             ),
             Text(
-              '10',
+              '$idcard',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2.0,
@@ -109,3 +130,21 @@ class idCrad extends StatelessWidget {
     );
   }
 }
+
+//
+// class Test extends StatefulWidget {
+//   const Test({Key? key}) : super(key: key);
+//
+//   @override
+//   State<Test> createState() => _TestState();
+// }
+//
+// class _TestState extends State<Test> {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//
+//     );
+//   }
+// }
